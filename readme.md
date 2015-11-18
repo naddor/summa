@@ -66,7 +66,11 @@ Once you have all the above, you can compile SUMMA using the following steps:
 
  1. Type `make`. If all goes well, this will build SUMMA and move the executable `summa.exe` to the `bin` directory. You may get some warnings (depending on your compiler settings), but you should not get any errors;
 
- 1. Pay attention to the `make` output. You may need to set some environment variables (`LD_LIBRARY_PATH` in particular) to support dynamic linking;
+ 1. Pay attention to the `make` output. You may need to set some environment variables (`LD_LIBRARY_PATH` in particular) to support dynamic linking, for instance by adding something like the following to your `.bashrc` file:
+ 
+     ```
+     export LD_LIBRARY_PATH=/opt/netcdf-4.3.0+ifort-12.1/lib:/opt/hdf5-1.8.14/lib:$LD_LIBRARY_PATH
+    ```
 
  1. Run `summa.exe`. If all goes well, you should get an error message that looks something like:
 
